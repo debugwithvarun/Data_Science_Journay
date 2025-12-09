@@ -42,22 +42,75 @@
 
 
 # multilevel inheritance example
-class Grandfather:
-    def grandfather_method(self):
-        print("Grandfather class method")
-    def show(self):
-        print("Grandfather show method")
-class Father(Grandfather):
-    def father_method(self):
-        print("Father class method")
-    def show(self):
-        print("Father show method")
-class Child(Father):
-    def child_method(self):
-        print("Child class method") 
-obj=Child()
-obj.grandfather_method()  #Grandfather class method
-obj.father_method()       #Father class method      
-obj.child_method()        #Child class method
+# class Grandfather:
+#     def grandfather_method(self):
+#         print("Grandfather class method")
+#     def show(self):
+#         print("Grandfather show method")
+# class Father(Grandfather):
+#     def father_method(self):
+#         print("Father class method")
+#     def show(self):
+#         print("Father show method")
+# class Child(Father):
+#     def child_method(self):
+#         print("Child class method") 
+# obj=Child()
+# obj.grandfather_method()  #Grandfather class method
+# obj.father_method()       #Father class method      
+# obj.child_method()        #Child class method
 
-obj.show()                #Father show method
+# obj.show()                #Father show method
+
+
+# Polymorphism example
+# class Animal:
+#     def sound(self):
+#         print("Animal makes a sound")
+# class Dog(Animal):
+#     def sound(self):
+#         print("Dog barks")
+ 
+# class Cat(Animal):
+#     def sound(self):
+#         print("Cat meows")
+
+
+# def animal_sound(animal):
+#     animal.sound()
+# dog=Dog()
+# cat=Cat()   
+# animal_sound(dog)  #Dog barks
+# animal_sound(cat)  #Cat meows
+
+
+
+# Encapsulation example
+# class BankAccount:
+#     def __init__(self, balance):
+#         self.__balance = balance  #private attribute
+#     def status(self):
+#         if self.__balance >= 0:
+#             print("Account is in good standing.",self.__balance)
+#         else:
+#             print("Account is overdrawn.")
+
+# obj = BankAccount(100)
+# obj.status()  #Account is in good standing.
+
+
+# from abc import ABC, abstractmethod
+# class Shape(ABC):
+#     @abstractmethod
+#     def area(self):
+#         pass
+# class Rectangle(Shape):
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#     def area(self):
+#         return self.width * self.height
+# rect = Rectangle(5, 10)
+# print("Area of rectangle:", rect.area())  #Area of rectangle: 50
+
+
